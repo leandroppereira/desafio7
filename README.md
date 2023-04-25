@@ -6,6 +6,7 @@ mysql-template.yaml
 - O projeto deve ter o template instalado
 - O template deve possuir um parametro customizado chamado "CUSTOM_PARAMETER", com o valor "custom".
 - O tempate possui um parametro NAMESPACE. O valor deve ser igual a mydb
+- O parametro MYSQL_VERSION não deve ser obrigatório.
 - Sua aplicação deve funcionar com:
 - com memória de 512Mi
 - O data base service name deve ser servicedb

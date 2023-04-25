@@ -33,10 +33,7 @@ metadata:
   labels:
     samples.operator.openshift.io/managed: "true"
   name: mysql-ephemeral
-  namespace: openshift
-  resourceVersion: "18869"
-  selfLink: /apis/template.openshift.io/v1/namespaces/openshift/templates/mysql-ephemeral
-  uid: 20f3e992-bd64-4963-9c75-f140d5912cbf
+
 objects:
 - apiVersion: v1
   kind: Secret
@@ -159,7 +156,7 @@ objects:
         from:
           kind: ImageStreamTag
           name: mysql:${MYSQL_VERSION}
-          namespace: ${NAMESPACE}
+          namespace: ${IS_NAMESPACE_TEMPLATE}
         lastTriggeredImage: ""
       type: ImageChange
     - type: ConfigChange
@@ -206,10 +203,16 @@ parameters:
   displayName: Version of MySQL Image
   name: MYSQL_VERSION
   required: true
-  value: 8.0-el8
+  value: 8.0-el7
 - description: Custom Parameter
   displayName: Custom Parameter
   name: CUSTOM_PARAMETER
   required: false
   value: Custom
+
+- description: Image Stream Template Namespace
+  displayName: Image Stream Template Namespace
+  name: IS_NAMESPACE_TEMPLATE
+  required: true
+  value: openshift
 
