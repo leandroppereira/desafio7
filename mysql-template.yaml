@@ -204,11 +204,6 @@ parameters:
   name: MYSQL_VERSION
   required: true
   value: 8.0-el7
-- description: Custom Parameter
-  displayName: Custom Parameter
-  name: CUSTOM_PARAMETER
-  required: false
-  value: Custom
 
 - description: Image Stream Template Namespace
   displayName: Image Stream Template Namespace
