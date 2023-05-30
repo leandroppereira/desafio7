@@ -28,8 +28,8 @@ metadata:
   creationTimestamp: "2023-05-28T16:41:15Z"
   labels:
     samples.operator.openshift.io/managed: "true"
-  name: php-app
-  namespace: openshift
+  name: ex288-php-mysql
+  namespace: indy
   resourceVersion: "19544"
   uid: eb86feb4-2617-4970-a15a-88ae24384222
 objects:
@@ -320,7 +320,7 @@ parameters:
   displayName: Git Repository URL
   name: SOURCE_REPOSITORY_URL
   required: true
-  value: https://github.com/sclorg/ex288.git
+  value: https://github.com/sclorg/cakephp-ex.git
 - description: Set this to a branch name, tag or other ref of your repository if you
     are not using the default branch.
   displayName: Git Reference
@@ -334,7 +334,7 @@ parameters:
     blank a value will be defaulted.
   displayName: Application Hostname
   name: APPLICATION_DOMAIN
-  value: 'example.com'
+  required: true
 
 - description: Github trigger secret.  A difficult to guess string encoded as part
     of the webhook URL.  Not encrypted.
@@ -386,9 +386,14 @@ parameters:
   displayName: MySQL authentication plugin
   name: MYSQL_DEFAULT_AUTHENTICATION_PLUGIN
   value: mysql_native_password
-
 - description: Hello Message
   displayName:  Hello Message
   name: HELLO_MESSAGE
   value: "Hello PHP" 
   required: true
+
+- description: Hello Audience
+  displayName:  Hello Audience
+  name: HELLO_AUDIENCE
+  value: "Engineers"
+  required: false
