@@ -300,12 +300,12 @@ parameters:
   displayName: PHP Version
   name: PHP_VERSION
   required: true
-  value: 7.3-ubi8
+  value: 5.6
 - description: Version of MySQL image to be used (8.0-el8 or latest).
   displayName: MySQL Version
   name: MYSQL_VERSION
   required: true
-  value: 8.0-el8
+  value: 5.6
 - description: Maximum amount of memory the CakePHP container can use.
   displayName: Memory Limit
   name: MEMORY_LIMIT
